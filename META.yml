@@ -1,0 +1,23 @@
+---
+abstract: 'extensible authentication framework for Dancer2 apps'
+author:
+  - 'Theo van Hoesel <Th.J.v.Hoesel@THEMA-MEDIA.nl>'
+build_requires: {}
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142690'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: HTTP_Auth-for-Dancer2
+requires:
+  Dancer2::Plugin::Auth::Extensible: '0'
+  HTTP::Headers::ActionPack::Authorization: '0'
+  HTTP::Headers::ActionPack::WWWAuthenticate: '0'
+resources:
+  bugtracker: https://github.com/THEMA-MEDIA/Dancer2-Plugin-HTTP-Auth-Extensible/issues
+  homepage: https://github.com/THEMA-MEDIA/Dancer2-Plugin-HTTP-Auth-Extensible
+  repository: https://github.com/THEMA-MEDIA/Dancer2-Plugin-HTTP-Auth-Extensible.git
+version: '0.003'

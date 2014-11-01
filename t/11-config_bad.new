@@ -1,0 +1,31 @@
+
+test_psgi $app, sub {
+    my $cb = shift;
+    my $req = HTTP::Request->new( GET => '/realm');
+    my $res = $cb->( $req );
+    is (
+        $res->code,
+        500,
+        'Status 500: multiple realms without default'
+    );
+    is (
+        $res->content,
+        'Internal Server Error: "multiple realms without default"',
+        'Prompt 500: multiple realms without default'
+    );
+    isnt ( # negative testing, but you can't have two status-codes anyway
+        $res->code,
+        500,
+        'Status 500: multiple realms without default'
+    );
+    isnt ( # negative testing, there should not be an error message
+        $res->content,
+        'Internal Server Error: "multiple realms without default"',
+        'Prompt 500: multiple realms without default'
+    );
+    unlike (
+        $res->content,
+        qr{Internal Server Error: "required realm does not exist:},
+        'Prompt 500: realm does not exist'
+    );
+};

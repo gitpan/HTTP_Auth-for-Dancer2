@@ -1,0 +1,51 @@
+{
+   "abstract" : "extensible authentication framework for Dancer2 apps",
+   "author" : [
+      "Theo van Hoesel <Th.J.v.Hoesel@THEMA-MEDIA.nl>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142690",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "HTTP_Auth-for-Dancer2",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Pod::Coverage::TrustPod" : "0",
+            "Test::Pod" : "1.41",
+            "Test::Pod::Coverage" : "1.08"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dancer2::Plugin::Auth::Extensible" : "0",
+            "HTTP::Headers::ActionPack::Authorization" : "0",
+            "HTTP::Headers::ActionPack::WWWAuthenticate" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/THEMA-MEDIA/Dancer2-Plugin-HTTP-Auth-Extensible/issues"
+      },
+      "homepage" : "https://github.com/THEMA-MEDIA/Dancer2-Plugin-HTTP-Auth-Extensible",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/THEMA-MEDIA/Dancer2-Plugin-HTTP-Auth-Extensible.git",
+         "web" : "https://github.com/THEMA-MEDIA/Dancer2-Plugin-HTTP-Auth-Extensible"
+      }
+   },
+   "version" : "0.003"
+}
+
